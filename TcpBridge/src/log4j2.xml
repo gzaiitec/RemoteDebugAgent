@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="OFF">
+	<Properties>
+		<Property name="fileName">app.log</Property>
+		<Property name="backupFilePattern">logs/backup-%i.log</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="[%d{HH:mm:ss:SSS}]%-5level-%m%n"/>
+		</Console>
+		<RollingFile name="RollingFile" fileName="${fileName}" filePattern="${backupFilePattern}">
+			<PatternLayout>
+				<pattern>[%d{HH:mm:ss:SSS}]%-5level-%m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="6MB"/>
+			</Policies>
+			<DefaultRolloverStrategy max="10"/>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.xxbana.net.TcpBridge" level="debug" additivity="false"> <!-- 工具核心API日志 -->
+			<AppenderRef ref="Console"/>
+			<AppenderRef ref="RollingFile"/>
+		</Logger>
+		<Root level="info"> <!-- 公用的日志 -->
+			<AppenderRef ref="Console"/>
+			<AppenderRef ref="RollingFile"/>
+		</Root>
+	</Loggers>
+</Configuration>

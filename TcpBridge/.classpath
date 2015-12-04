@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/commons-io-2.1.jar" sourcepath="E:/share/commons-io-2.1-bin/commons-io-2.1/commons-io-2.1-sources.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.2.3.jar"/>
+	<classpathentry kind="lib" path="libs/commons-beanutils-1.9.2.jar"/>
+	<classpathentry kind="lib" path="libs/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="libs/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="libs/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="libs/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="libs/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-api-2.4.1.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-core-2.4.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AdbAgentCommon"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
